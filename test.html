@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+		<script src="./range.js"></script>
+		<link rel="stylesheet" href="./range.css">
+		<style>
+			#test1 {
+				position: absolute;
+				top:500px;
+				width:100%;
+			}
+			#test2 {
+				position: absolute;
+				top:400px;
+				width:100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ui range" id="test1">
+		</div>
+		<div class="ui range" id="test2">
+		</div>
+		<script>
+			$('#test1').range({
+				start : 5,
+				min : 0,
+				max : 10,
+			});
+			$('#test2').range({
+				values: [0,10],
+				start: [4,9],
+			})
+
+		</script>
+	</body>
+</html>
